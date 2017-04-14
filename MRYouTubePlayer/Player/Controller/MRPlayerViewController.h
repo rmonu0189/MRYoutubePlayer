@@ -31,8 +31,8 @@ typedef NS_ENUM(NSUInteger, MRYouTubeVideoQuality) {
 
 @interface MRPlayerViewController : MPMoviePlayerViewController
 
-- (nullable instancetype)initWithYouTubeVideoId:(nonnull NSString *)videoId Quality:(MRYouTubeVideoQuality)quality;
+- (nonnull instancetype)initWithYouTubeVideoId:(nonnull NSString *)videoId Quality:(MRYouTubeVideoQuality)quality;
 
-- (void)setVideoId:(nonnull NSString *)videoId;
+@property (nonatomic, copy, nonnull) NSString *videoId;
 
 @end

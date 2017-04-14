@@ -26,6 +26,9 @@
 		F30D51441EA09D4B003382B6 /* MRYoutubeUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = F30D513A1EA09D4B003382B6 /* MRYoutubeUtility.m */; };
 		F30D51451EA09D4B003382B6 /* MRYouTubeVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = F30D513B1EA09D4B003382B6 /* MRYouTubeVideo.h */; };
 		F30D51461EA09D4B003382B6 /* MRYouTubeVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = F30D513C1EA09D4B003382B6 /* MRYouTubeVideo.m */; };
+		F3F6EC881EA0ADBC00D824E8 /* MRInlinePlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = F3F6EC861EA0ADBC00D824E8 /* MRInlinePlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3F6EC891EA0ADBC00D824E8 /* MRInlinePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F6EC871EA0ADBC00D824E8 /* MRInlinePlayer.m */; };
+		F3F6EC8C1EA0B25A00D824E8 /* InLinePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F6EC8B1EA0B25A00D824E8 /* InLinePlayerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +79,10 @@
 		F30D513A1EA09D4B003382B6 /* MRYoutubeUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRYoutubeUtility.m; sourceTree = "<group>"; };
 		F30D513B1EA09D4B003382B6 /* MRYouTubeVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRYouTubeVideo.h; sourceTree = "<group>"; };
 		F30D513C1EA09D4B003382B6 /* MRYouTubeVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRYouTubeVideo.m; sourceTree = "<group>"; };
+		F3F6EC861EA0ADBC00D824E8 /* MRInlinePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRInlinePlayer.h; sourceTree = "<group>"; };
+		F3F6EC871EA0ADBC00D824E8 /* MRInlinePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRInlinePlayer.m; sourceTree = "<group>"; };
+		F3F6EC8A1EA0B25A00D824E8 /* InLinePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InLinePlayerViewController.h; sourceTree = "<group>"; };
+		F3F6EC8B1EA0B25A00D824E8 /* InLinePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InLinePlayerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +129,8 @@
 				F30890031E9CDAD2000196EC /* AppDelegate.m */,
 				F30890051E9CDAD2000196EC /* ViewController.h */,
 				F30890061E9CDAD2000196EC /* ViewController.m */,
+				F3F6EC8A1EA0B25A00D824E8 /* InLinePlayerViewController.h */,
+				F3F6EC8B1EA0B25A00D824E8 /* InLinePlayerViewController.m */,
 				F30890081E9CDAD2000196EC /* Main.storyboard */,
 				F308900B1E9CDAD2000196EC /* Assets.xcassets */,
 				F308900D1E9CDAD2000196EC /* LaunchScreen.storyboard */,
@@ -163,6 +172,8 @@
 			children = (
 				F30D51321EA09D4B003382B6 /* MRPlayerViewController.h */,
 				F30D51331EA09D4B003382B6 /* MRPlayerViewController.m */,
+				F3F6EC861EA0ADBC00D824E8 /* MRInlinePlayer.h */,
+				F3F6EC871EA0ADBC00D824E8 /* MRInlinePlayer.m */,
 				F30D51341EA09D4B003382B6 /* MRYoutubeConnection.h */,
 				F30D51351EA09D4B003382B6 /* MRYoutubeConnection.m */,
 			);
@@ -192,6 +203,7 @@
 				F30D513F1EA09D4B003382B6 /* MRYoutubeConnection.h in Headers */,
 				F30D51271EA09D22003382B6 /* MRYouTubePlayer.h in Headers */,
 				F30D51431EA09D4B003382B6 /* MRYoutubeUtility.h in Headers */,
+				F3F6EC881EA0ADBC00D824E8 /* MRInlinePlayer.h in Headers */,
 				F30D51451EA09D4B003382B6 /* MRYouTubeVideo.h in Headers */,
 				F30D513D1EA09D4B003382B6 /* MRPlayerViewController.h in Headers */,
 				F30D51411EA09D4B003382B6 /* MRVideoType.h in Headers */,
@@ -305,6 +317,7 @@
 			files = (
 				F30890071E9CDAD2000196EC /* ViewController.m in Sources */,
 				F30890041E9CDAD2000196EC /* AppDelegate.m in Sources */,
+				F3F6EC8C1EA0B25A00D824E8 /* InLinePlayerViewController.m in Sources */,
 				F30890011E9CDAD2000196EC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +328,7 @@
 			files = (
 				F30D51401EA09D4B003382B6 /* MRYoutubeConnection.m in Sources */,
 				F30D51461EA09D4B003382B6 /* MRYouTubeVideo.m in Sources */,
+				F3F6EC891EA0ADBC00D824E8 /* MRInlinePlayer.m in Sources */,
 				F30D51441EA09D4B003382B6 /* MRYoutubeUtility.m in Sources */,
 				F30D51421EA09D4B003382B6 /* MRVideoType.m in Sources */,
 				F30D513E1EA09D4B003382B6 /* MRPlayerViewController.m in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="n49-vS-beF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,25 +22,92 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqY-z0-hgF">
-                                <rect key="frame" x="143" y="318" width="89" height="30"/>
+                                <rect key="frame" x="114" y="294" width="146" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="AWN-4q-Kbe"/>
-                                    <constraint firstAttribute="width" constant="89" id="o54-fM-cFc"/>
+                                    <constraint firstAttribute="width" constant="146" id="o54-fM-cFc"/>
                                 </constraints>
-                                <state key="normal" title="Play Video"/>
+                                <state key="normal" title="Full Screen Player"/>
                                 <connections>
                                     <action selector="clickedPlayVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="msG-t1-Uuc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAG-yh-LEU">
+                                <rect key="frame" x="114" y="343" width="146" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6ji-7D-dam"/>
+                                    <constraint firstAttribute="width" constant="146" id="bPW-F8-aSW"/>
+                                </constraints>
+                                <state key="normal" title="In Line Player"/>
+                                <connections>
+                                    <segue destination="tY6-SN-znG" kind="show" id="v6t-YE-fWU"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mqY-z0-hgF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="43w-6O-D8J"/>
+                            <constraint firstItem="mqY-z0-hgF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-24.5" id="43w-6O-D8J"/>
                             <constraint firstItem="mqY-z0-hgF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cku-c7-2f9"/>
+                            <constraint firstItem="wAG-yh-LEU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NYO-YM-Kjy"/>
+                            <constraint firstItem="wAG-yh-LEU" firstAttribute="top" secondItem="mqY-z0-hgF" secondAttribute="bottom" constant="19" id="cY9-oW-CRM"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ekp-ZY-LQ1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--In Line Player View Controller-->
+        <scene sceneID="m1q-Y5-zZW">
+            <objects>
+                <viewController id="tY6-SN-znG" customClass="InLinePlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g7R-pL-yUj"/>
+                        <viewControllerLayoutGuide type="bottom" id="eSo-bW-E1u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S7l-J6-ILd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7f-vb-pkY" customClass="MRInlinePlayer">
+                                <rect key="frame" x="0.0" y="72" width="375" height="180"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="ROJ-Kj-DBU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r7f-vb-pkY" firstAttribute="leading" secondItem="S7l-J6-ILd" secondAttribute="leading" id="6lQ-Jx-bYq"/>
+                            <constraint firstAttribute="trailing" secondItem="r7f-vb-pkY" secondAttribute="trailing" id="9rl-yI-txv"/>
+                            <constraint firstItem="r7f-vb-pkY" firstAttribute="top" secondItem="g7R-pL-yUj" secondAttribute="bottom" constant="8" id="Ugg-8b-4AQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="player" destination="r7f-vb-pkY" id="47j-Yg-O3P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KjD-hp-XFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1847.2" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Tea-Ai-R6r">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n49-vS-beF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mZT-SV-5zf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="D4b-hq-gYb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tpe-DZ-5xi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>

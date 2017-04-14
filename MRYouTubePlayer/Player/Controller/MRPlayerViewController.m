@@ -12,8 +12,6 @@
 
 @interface MRPlayerViewController ()
 
-@property (nonatomic, copy) NSString *videoId;
-
 @property (nonatomic, assign) MRYouTubeVideoQuality quality;
 
 @property (nonatomic, strong) MRYouTubeVideo *video;
@@ -22,7 +20,7 @@
 
 @implementation MRPlayerViewController
 
-- (nullable instancetype)initWithYouTubeVideoId:(nonnull NSString *)videoId Quality:(MRYouTubeVideoQuality)quality{
+- (nonnull instancetype)initWithYouTubeVideoId:(nonnull NSString *)videoId Quality:(MRYouTubeVideoQuality)quality{
     
     if (!(self = [super initWithContentURL:nil])) { return nil; }
 
@@ -40,6 +38,10 @@
         return;
     }
     
+    if (self.video) {
+        [self.moviePlayer stop];
+    }
+    
     _videoId = [videoId copy];
     [[MRYoutubeConnection shared] getVideoInformation:videoId completionHandler:^(MRYouTubeVideo *video, NSError *error) {
         if (!error) {
@@ -53,7 +55,5 @@
         }
     }];
 }
-
-
 
 @end

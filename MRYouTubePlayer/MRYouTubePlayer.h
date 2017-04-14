@@ -18,3 +18,4 @@ FOUNDATION_EXPORT const unsigned char MRYouTubePlayerVersionString[];
 
 #import <MRYouTubePlayer/MRYouTubePlayer.h>
 #import <MRYouTubePlayer/MRPlayerViewController.h>
+#import <MRYouTubePlayer/MRInlinePlayer.h>
